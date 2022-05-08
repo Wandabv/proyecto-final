@@ -1,14 +1,49 @@
+@media only screen and (min-width: 900px) and (max-width: 1300px) {
+  .videos article iframe {
+    width: 50%;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 899px) {
+  .videos article {
+    flex-direction: column;
+  }
+  .videos article iframe {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .videos {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .videos article {
+    flex-direction: column;
+    width: 70%;
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 479px) {
+  .videos {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .videos article {
+    flex-direction: column;
+    width: 70%;
+  }
+}
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 body {
   font-family: "Special Elite", cursive;
-  background-color: #5c5c5a;
+  background-color: rgb(92, 92, 90);
   color: beige;
   background-size: cover;
-  min-height: 100vh; }
+  min-height: 100vh;
+}
 
 .videos {
   display: flex;
@@ -17,23 +52,25 @@ body {
   flex-wrap: wrap;
   width: 100%;
   height: 100%;
-  padding: 30px 0px; }
-  .videos article {
-    display: flex;
-    align-items: center;
-    width: 40%;
-    height: 100%;
-    background-color: black;
-    border-radius: 30px; }
-    .videos article div {
-      display: flex;
-      flex-direction: column;
-      align-items: center; }
-    .videos article p {
-      text-align: center;
-      padding: 30px; }
-
-
+  padding: 30px 0px;
+}
+.videos article {
+  display: flex;
+  align-items: center;
+  width: 40%;
+  height: 100%;
+  background-color: rgb(52, 53, 52);
+  border-radius: 30px;
+}
+.videos article div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.videos article p {
+  text-align: center;
+  padding: 30px;
+}
 
 footer {
   display: flex;
@@ -41,62 +78,48 @@ footer {
   border: 2px;
   border-style: ridge;
   border-color: black;
-  padding: 30px 0px; }
-  footer ul {
-    display: flex;
-    list-style: none;
-    flex-flow: row nowrap;
-    justify-content: space-evenly;
-    padding: 0; }
-    footer ul li {
-      transition: 0.3s; }
-      footer ul li a {
-        color: whitesmoke;
-        text-decoration: none; }
-      footer ul li:hover {
-        transform: scale(1.05);
-        background-color: #000;
-        border-radius: 10px;
-        padding: 4px; }
-  footer div {
-    padding: 10px 0px;
-    background-color: rgba(0, 0, 0, 0.2); }
-    footer div a {
-      text-decoration: none;
-      transition: 0.3s; }
-      footer div a:hover {
-        transform: scale(1.05);
-        background-color: #000;
-        border-radius: 10px;
-        padding: 4px; }
+  padding: 30px 0px;
+}
+footer ul {
+  display: flex;
+  list-style: none;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  padding: 0;
+}
+footer ul li {
+  transition: 0.3s;
+}
+footer ul li a {
+  color: whitesmoke;
+  text-decoration: none;
+}
+footer ul li:hover {
+  transform: scale(1.05);
+  background-color: #000;
+  border-radius: 10px;
+  padding: 4px;
+}
+footer div {
+  padding: 10px 0px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+footer div a {
+  text-decoration: none;
+  transition: 0.3s;
+}
+footer div a:hover {
+  transform: scale(1.05);
+  background-color: #000;
+  border-radius: 10px;
+  padding: 4px;
+}
 
 .carousel-item img {
   width: 100%;
   height: 50vh;
-  object-fit: cover; }
+  object-fit: cover;
+}
 
-@media only screen and (min-width: 900px) and (max-width: 1300px) {
-  .videos article iframe {
-    width: 50%; } }
 
-@media only screen and (min-width: 768px) and (max-width: 899px) {
-  .videos article {
-    flex-direction: column; }
-    .videos article iframe {
-      width: 100%; } }
-
-@media only screen and (min-width: 480px) and (max-width: 767px) {
-  .videos {
-    flex-direction: column;
-    gap: 30px; }
-    .videos article {
-      flex-direction: column;
-      width: 70%; } }
-
-@media only screen and (min-width: 320px) and (max-width: 479px) {
-  .videos {
-    flex-direction: column;
-    gap: 30px; }
-    .videos article {
-      flex-direction: column;
-      width: 70%; } }
+/*# sourceMappingURL=style.css.map */
