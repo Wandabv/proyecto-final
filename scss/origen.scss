@@ -96,9 +96,47 @@ footer {
     height: 50vh;
     object-fit: cover;
 }
-
+/*VARIABLES*/
 .preguntas{
     width: 100%;
     height: 100%;
     background-color: $colorfondodetexto;
+}
+/* OPERACIONES*/
+#animacion{
+width: $tamanioimg *3;
+height: $tamanioimg * 4;
+}
+/*EXTEND*/
+.descripcionagenda{
+    display: flex;
+    flex-flow: column wrap;
+    border: 2px;
+    border-style: ridge;
+    border-color: black;
+    padding: 30px 0px;
+    background-color: gold;
+    text-align: center;
+}
+.descripcionseparador{
+    @extend .descripcionagenda;
+    background-color: rgb(161, 100, 8);
+}
+.descripcionchapa{
+    @extend .descripcionagenda;
+    background-color: orangered
+}
+/*MIXIN*/
+@mixin stock ($tamanio, $ubicacion, $fondo) {
+    width: $tamanio;
+    height: $tamanio;
+    text-align: $ubicacion;
+    background-color: $fondo;
+}
+
+.stock{
+    display: flex;
+    flex-flow: row;
+    padding: 30px 0px;
+    @include stock(100px, center, rgb(80, 78, 78))
 }
