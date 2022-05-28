@@ -1,6 +1,7 @@
+@charset "UTF-8";
 @media only screen and (min-width: 900px) and (max-width: 1300px) {
   .videos article iframe {
-    width: 50%;
+    width: 30%;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 899px) {
@@ -38,47 +39,81 @@
 }
 
 body {
-  font-family: "Special Elite", cursive;
-  background-color: rgb(92, 92, 90);
+  font-family: "Grape Nuts", cursive;
+  background-color: rgb(110, 110, 45);
   color: beige;
   background-size: cover;
   min-height: 100vh;
 }
 
-.videos {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-wrap: wrap;
+/*************PRIMER RENGLON CON NOMBRE DE MARCA*/
+.marca {
+  text-align: center;
+  background-color: black;
   width: 100%;
   height: 100%;
-  padding: 30px 0px;
-}
-.videos article {
-  display: flex;
-  align-items: center;
-  width: 40%;
-  height: 100%;
-  background-color: rgb(52, 53, 52);
-  border-radius: 30px;
-}
-.videos article div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.videos article p {
-  text-align: center;
-  padding: 30px;
+  padding: 10px;
+  font-size: 30px;
+  letter-spacing: 10px;
 }
 
+/**************TAMAÑO DE IMG CAROUSEL*/
+.carousel-item img {
+  width: 100%;
+  height: 50vh;
+  object-fit: cover;
+}
+
+/*BARRA DE NAVEGACION*/
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+}
+
+/*****PRODUCTOS DESTACADOS INDEX*/
+.destacados {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  margin: 60px;
+  border-style: ridge;
+  border-color: #000;
+}
+
+.destacados img {
+  margin: 50px 30px 30px 30px;
+  width: 200px;
+  height: 200px;
+}
+
+.destacados img:hover {
+  transform: scale(1.5);
+  transition-property: all;
+  transition-duration: 3s;
+}
+
+.destacados p {
+  background-color: black;
+  font-size: 20px;
+  letter-spacing: 5px;
+}
+
+/***********PIE DE PAGINA*/
 footer {
   display: flex;
   flex-flow: column wrap;
   border: 2px;
   border-style: ridge;
   border-color: black;
+  background-color: #000;
   padding: 30px 0px;
+  font-size: 20px;
+  letter-spacing: 5px;
+  margin: 0% 0% 0% 0%;
 }
 footer ul {
   display: flex;
@@ -96,7 +131,7 @@ footer ul li a {
 }
 footer ul li:hover {
   transform: scale(1.05);
-  background-color: #000;
+  background-color: rgb(110, 110, 45);
   border-radius: 10px;
   padding: 4px;
 }
@@ -110,51 +145,73 @@ footer div a {
 }
 footer div a:hover {
   transform: scale(1.05);
-  background-color: #000;
+  background-color: rgb(110, 110, 45);
   border-radius: 10px;
   padding: 4px;
+  color: whitesmoke;
 }
 
-.carousel-item img {
-  width: 100%;
-  height: 50vh;
-  object-fit: cover;
+/*CATALOGO + PROMO*/
+.catalogo {
+  border-color: black;
+  border-style: ridge;
+  margin: 10% auto;
+  padding: auto;
 }
 
-/*VARIABLES*/
-.preguntas {
+.catalogo p {
+  text-align: center;
+  background-color: #000;
+  font-size: 50px;
+  margin-top: 100px;
+}
+
+.catalogo ul {
+  font-size: 50px;
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+.catalogo ul li:hover {
+  transform: scale(1.05);
+  background-color: black;
+  border-radius: 10px;
+  padding: 2px;
+}
+.catalogo ul a {
+  color: whitesmoke;
+  text-decoration: none;
+}
+
+.videos {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
   width: 100%;
   height: 100%;
-  background-color: black;
+  padding: 30px 0px;
+}
+.videos article {
+  display: flex;
+  align-items: center;
+  width: 30%;
+  height: 100%;
+  border-radius: 30px;
+  padding: auto;
+}
+.videos article p {
+  text-align: center;
+  padding: 30px;
 }
 
-/* OPERACIONES*/
+/*TAMAÑO DE IMG DE PRODUCTOS*/
 #animacion {
   width: 300px;
   height: 400px;
 }
 
-/*EXTEND*/
-.descripcionagenda, .descripcionchapa, .descripcionseparador {
-  display: flex;
-  flex-flow: column wrap;
-  border: 2px;
-  border-style: ridge;
-  border-color: black;
-  padding: 30px 0px;
-  background-color: gold;
-  text-align: center;
-}
-
-.descripcionseparador {
-  background-color: rgb(161, 100, 8);
-}
-
-.descripcionchapa {
-  background-color: orangered;
-}
-
-/*MIXIN*/
+/*NUMERO DE ARTICULO Y PRECIO*/
 .stock {
   display: flex;
   flex-flow: row;
@@ -162,7 +219,56 @@ footer div a:hover {
   width: 100px;
   height: 100px;
   text-align: center;
-  background-color: rgb(80, 78, 78);
+  background-color: rgb(0, 0, 0);
+}
+
+/**********PAGINA DE PREGUNTAS FRECUENTES*******/
+.preguntas-frecuentes {
+  color: #000;
+  border: #000;
+  border-style: ridge;
+  margin-top: 15px;
+}
+
+.preguntas {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  margin: 60px;
+  border-style: ridge;
+  border-color: whitesmoke;
+  background-color: black;
+  font-size: 35px;
+}
+
+.respuestas {
+  text-align: center;
+  font-size: 30px;
+}
+
+/*PAGINA DE CONTACTO*/
+.contacto {
+  text-align: center;
+  font-size: 30px;
+  color: #000;
+  margin-top: 30px;
+}
+
+.marcado {
+  background-color: grey;
+  padding: 0;
+}
+
+.contacto img {
+  width: 200px;
+  margin-bottom: 100px;
+}
+
+/*PAGINA DE ENVIOS*/
+.envio {
+  text-align: center;
+  font-size: 30px;
 }
 
 /*# sourceMappingURL=style.css.map */
